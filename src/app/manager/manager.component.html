@@ -1,0 +1,57 @@
+<div class="container">
+  <div fxLayout="row" fxLayoutAlign="center center" class="content">
+    <mat-card class="card">
+      <mat-card-title fxLayout.gt-xs="row" fxLayout.xs="column">
+        <h3>Recent Records</h3>
+      </mat-card-title>
+      <mat-card-content>
+        <div class="example-container mat-elevation-z8">
+          <mat-table #table [dataSource]="dataSource">
+            <ng-container matColumnDef="policyId">
+              <mat-header-cell *matHeaderCellDef>Quote/ Policy ID </mat-header-cell>
+              <mat-cell *matCellDef="let element"> {{element.policyId }} </mat-cell>
+            </ng-container>
+            <ng-container matColumnDef="account">
+              <mat-header-cell *matHeaderCellDef> Account </mat-header-cell>
+              <mat-cell *matCellDef="let element"> {{element.account}} </mat-cell>
+            </ng-container>
+            <ng-container matColumnDef="product">
+              <mat-header-cell *matHeaderCellDef> Product </mat-header-cell>
+              <mat-cell *matCellDef="let element"> {{element.product}} </mat-cell>
+            </ng-container>
+            <ng-container matColumnDef="status">
+              <mat-header-cell *matHeaderCellDef> Status </mat-header-cell>
+              <mat-cell *matCellDef="let element"> {{element.status}} </mat-cell>
+            </ng-container>
+            <ng-container matColumnDef="premium">
+              <mat-header-cell *matHeaderCellDef> Premium </mat-header-cell>
+              <mat-cell *matCellDef="let element"> {{element.premium}} </mat-cell>
+            </ng-container>
+            <ng-container matColumnDef="effectiveDate">
+              <mat-header-cell *matHeaderCellDef> Effective Date </mat-header-cell>
+              <mat-cell *matCellDef="let element"> {{element.effectiveDate | date: 'M/d/y'}} </mat-cell>
+            </ng-container>
+            <ng-container matColumnDef="underWriter">
+              <mat-header-cell *matHeaderCellDef> UnderWriter </mat-header-cell>
+              <mat-cell *matCellDef="let element"> {{element.underWriter}} </mat-cell>
+            </ng-container>
+            <ng-container matColumnDef="lastModified">
+              <mat-header-cell *matHeaderCellDef> Last Modified </mat-header-cell>
+              <mat-cell *matCellDef="let element"> {{element.lastModified }} </mat-cell>
+            </ng-container>
+            <ng-container matColumnDef="delete">
+              <mat-header-cell *matHeaderCellDef></mat-header-cell>
+              <mat-cell *matCellDef="let element">
+                <a type="button">
+                  <mat-icon class="icon">delete</mat-icon>
+                </a>
+              </mat-cell>
+            </ng-container>
+            <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+            <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+          </mat-table>
+        </div>
+      </mat-card-content>
+    </mat-card>
+  </div>
+</div>
