@@ -1,4 +1,4 @@
-<mat-sidenav-container>
+<!-- <mat-sidenav-container>
   <mat-sidenav  #sidenav role="navigation">
    <mat-nav-list>
     <a mat-list-item>
@@ -41,4 +41,33 @@
      </div>
     </mat-toolbar>
   </mat-sidenav-content>
-</mat-sidenav-container>
+</mat-sidenav-container> -->
+
+<mat-menu #appMenu="matMenu">
+  <button mat-menu-item>Settings</button>
+  <button mat-menu-item>Help</button>
+</mat-menu>
+
+
+<mat-toolbar color="primary">
+   <div>
+    <a>
+      ETHOS DASHBOARD
+    </a>
+  </div>
+  <div class="menu-list">
+    <a class="menu-size">My Dashboard</a>
+    <a class="menu-size">My Reports</a>
+    <a class="menu-size">My Resources</a>
+  </div>
+  <!-- <div><a class="menu-size">My Reports</a></div>
+  <div><a class="menu-size">My Resources</a></div> -->
+  <div fxFlex fxLayout fxLayoutAlign="flex-end" fxHide.xs>
+
+    <mat-form-field class="example-full-width" style="margin-top:20px">
+      <input type="text" matInput placeholder="Search">
+      <mat-icon matSuffix>search</mat-icon>
+    </mat-form-field>
+
+  </div>
+</mat-toolbar>

@@ -1,0 +1,19 @@
+.mat-fab.mat-primary, .mat-flat-button.mat-primary, .mat-mini-fab.mat-primary, .mat-raised-button.mat-primary {
+  background-color: deepskyblue !important;
+}
+
+.mat-fab.mat-warn, .mat-flat-button.mat-warn, .mat-mini-fab.mat-warn, .mat-raised-button.mat-warn {
+  background-color: forestgreen;
+}
+
+
+.quote-heading {
+  font-weight: bold;
+  font-size:18px;
+}
+
+.quote-sub-heading{
+  font-weight: bold;
+  font-size:11px;
+}
+

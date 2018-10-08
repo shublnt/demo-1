@@ -1,0 +1,24 @@
+
+.mat-chip.mat-standard-chip.mat-chip-selected.mat-primary {
+  background-color: deepskyblue;
+  color: #fff;
+}
+
+.mat-chip.mat-standard-chip {
+  border: 1px solid lightgray;
+}
+
+.account {
+  background-color: deepskyblue;
+  color: #fff;
+}
+
+.status {
+  background-color: orange;
+  color: #fff;
+}
+
+.manager-fill {
+  background-color: #e0e0e0;
+  width: 100%;
+}

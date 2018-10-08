@@ -1,0 +1,32 @@
+<div class="container container-margin">
+  <div fxLayout="row" fxLayoutAlign="center center" class="content">
+    <mat-card class="card manager-fill">
+      <div>
+        <div class=graph-container>
+          <ngx-charts-bar-vertical [scheme]="colorScheme" [results]="single" [gradient]="gradient" [xAxis]="showXAxis"
+            [yAxis]="showYAxis" [showXAxisLabel]="showXAxisLabel" [showYAxisLabel]="showYAxisLabel"
+            [xAxisLabel]="xAxisLabel" [yAxisLabel]="yAxisLabel" (select)="onSelect($event)">
+          </ngx-charts-bar-vertical>
+        </div>
+        <div class="graph-container">
+          <ngx-charts-bar-vertical-2d [scheme]="colorScheme" [results]="multi" [gradient]="gradient" [xAxis]="showXAxis"
+            [yAxis]="showYAxis" [showXAxisLabel]="showXAxisLabel" [showYAxisLabel]="showYAxisLabel"
+            [xAxisLabel]="xAxisLabel" [yAxisLabel]="yAxisLabel" (select)="onSelect($event)">
+          </ngx-charts-bar-vertical-2d>
+        </div>
+        <div class=graph-container>
+          <ngx-charts-bar-horizontal-2d [scheme]="colorScheme" [results]="multi" [gradient]="gradient" [xAxis]="showXAxis"
+            [yAxis]="showYAxis" [showXAxisLabel]="showXAxisLabel" [showYAxisLabel]="showYAxisLabel"
+            [xAxisLabel]="xAxisLabel" [yAxisLabel]="yAxisLabel" (select)="onSelect($event)">
+          </ngx-charts-bar-horizontal-2d>
+        </div>
+        <div class="graph-container">
+          <ngx-charts-pie-chart [scheme]="colorScheme" [results]="single" [explodeSlices]="explodeSlices"
+            [labels]="showLabels" [doughnut]="doughnut" [gradient]="gradient" (select)="onSelect($event)">
+          </ngx-charts-pie-chart>
+        </div>
+      </div>
+
+    </mat-card>
+  </div>
+</div>
